@@ -69,3 +69,37 @@ Algorithm
 - Insert nodes with values 1, 2, and 3 at head.
 - After each insertion, call display to show the list.
 - End
+
+Program 3
+Aim
+To implement insertion of a node at the end of a singly linked list in C++ and display the linked list.
+
+
+Theory
+
+A Linked List is a linear data structure where elements (nodes) are stored at non-contiguous memory locations and are connected using pointers.
+Each node consists of:
+Data → holds the value.
+Next → pointer to the next node
+In insertion at the end:
+A new node is created.
+If the list is empty, the new node becomes the head.
+Otherwise, we traverse to the last node (where next == NULL) and link it to the new node.
+The new node’s ext is set to NULL.
+Time Complexity:
+O(n), because we may need to traverse the entire list to reach the last node.
+Space Complexity:
+O(1), as we only use an extra pointer for traversal.
+
+
+Algorithm 
+- Create a new node with given data.
+- Set new_node->next = NULL.
+- If the linked list is empty (head == NULL):
+- Set head = new_node.
+- Stop.
+- Otherwise:
+- Initialize a temporary pointer temp = head.
+-Traverse the list until temp->next == NULL.
+- Set temp->next = new_node.
+- End.
